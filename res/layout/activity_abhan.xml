@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="@color/gray" >
+	<TextView
+		android:id="@+id/header"
+		android:layout_width="fill_parent"
+		android:layout_height="50dp"
+		android:layout_alignParentTop="true"
+		android:background="@color/ablue"
+		android:gravity="center"
+		android:text="@string/app_name"
+		android:textColor="@android:color/white"
+		android:textSize="18dp"
+		android:textStyle="bold" />
+	<RelativeLayout
+		android:id="@+id/buttons"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/header"
+		android:layout_margin="5dp" >
+		<ImageButton
+			android:id="@+id/camera"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentLeft="true"
+			android:layout_centerVertical="true"
+			android:layout_marginRight="5dp"
+			android:onClick="captureImage"
+			android:background="@drawable/camera" />
+		<ImageButton
+			android:id="@+id/folder"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerVertical="true"
+			android:layout_marginRight="5dp"
+			android:onClick="chooseImage"
+			android:layout_toRightOf="@+id/camera"
+			android:background="@drawable/choose" />
+		<Button
+			android:id="@+id/button"
+			android:layout_width="fill_parent"
+			android:layout_height="40dp"
+			android:layout_toRightOf="@+id/folder"
+			android:background="@android:color/darker_gray"
+			android:gravity="center"
+			android:text="@string/create_sketch"
+			android:textColor="@color/white"
+			android:textSize="20dp"
+			android:textStyle="bold" />
+	</RelativeLayout>
+	<ImageView
+		android:id="@+id/image"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/buttons"
+		android:layout_centerHorizontal="true"
+		android:layout_centerVertical="true"
+		android:layout_gravity="center"
+		android:layout_margin="10dp"
+		android:adjustViewBounds="true"
+		android:scaleType="fitXY" />
+</RelativeLayout>

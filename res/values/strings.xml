@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">sKetch</string>
+    <string name="please_wait">Please wait while creating your sketch...</string>
+    <string name="create_sketch">Create Sketch</string>
+</resources>
